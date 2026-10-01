@@ -36,9 +36,96 @@
      }
   ------------------------------------------------------------ */
   var vehicles = [
-    { id: "v-01", marca: null, modelo: null, anio: null, combustible: null, cambio: null, km: null, potencia: null, tipo: null, precio: null, estado: null, imagen: null, alt: null },
-    { id: "v-02", marca: null, modelo: null, anio: null, combustible: null, cambio: null, km: null, potencia: null, tipo: null, precio: null, estado: null, imagen: null, alt: null },
-    { id: "v-03", marca: null, modelo: null, anio: null, combustible: null, cambio: null, km: null, potencia: null, tipo: null, precio: null, estado: null, imagen: null, alt: null }
+    {
+      id: "v-01",
+      marca: "Audi",
+      modelo: "A3 Sportback",
+      anio: 2021,
+      combustible: "Gasolina",
+      cambio: "Automático",
+      km: 45000,
+      potencia: "150 CV",
+      tipo: "Compacto",
+      precio: 28500,
+      estado: "Disponible",
+      imagen: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=800&q=80",
+      alt: "Audi A3 Sportback 2021 en el concesionario Sobre Ruedas"
+    },
+    {
+      id: "v-02",
+      marca: "BMW",
+      modelo: "Serie 3",
+      anio: 2020,
+      combustible: "Diésel",
+      cambio: "Automático",
+      km: 62000,
+      potencia: "190 CV",
+      tipo: "Berlina",
+      precio: 32900,
+      estado: "Disponible",
+      imagen: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80",
+      alt: "BMW Serie 3 2020 en el concesionario Sobre Ruedas"
+    },
+    {
+      id: "v-03",
+      marca: "Mercedes-Benz",
+      modelo: "Clase C",
+      anio: 2022,
+      combustible: "Híbrido",
+      cambio: "Automático",
+      km: 28000,
+      potencia: "204 CV",
+      tipo: "Berlina",
+      precio: 41500,
+      estado: "Disponible",
+      imagen: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80",
+      alt: "Mercedes-Benz Clase C 2022 en el concesionario Sobre Ruedas"
+    },
+    {
+      id: "v-04",
+      marca: "Volkswagen",
+      modelo: "Golf",
+      anio: 2019,
+      combustible: "Gasolina",
+      cambio: "Manual",
+      km: 78000,
+      potencia: "130 CV",
+      tipo: "Compacto",
+      precio: 19800,
+      estado: "Disponible",
+      imagen: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80",
+      alt: "Volkswagen Golf 2019 en el concesionario Sobre Ruedas"
+    },
+    {
+      id: "v-05",
+      marca: "Toyota",
+      modelo: "RAV4",
+      anio: 2021,
+      combustible: "Híbrido",
+      cambio: "Automático",
+      km: 35000,
+      potencia: "218 CV",
+      tipo: "SUV",
+      precio: 36900,
+      estado: "Disponible",
+      imagen: "https://images.unsplash.com/photo-1568844293986-8d0400bd4745?auto=format&fit=crop&w=800&q=80",
+      alt: "Toyota RAV4 2021 en el concesionario Sobre Ruedas"
+    },
+    {
+      id: "v-06",
+      marca: "Ford",
+      modelo: "Focus",
+      anio: 2020,
+      combustible: "Diésel",
+      cambio: "Manual",
+      km: 55000,
+      potencia: "120 CV",
+      tipo: "Compacto",
+      precio: 21500,
+      estado: "Reservado",
+      imagen: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80",
+      alt: "Ford Focus 2020 en el concesionario Sobre Ruedas"
+    }
   ];
 
   /* ---------- Utilidades ---------- */
@@ -240,7 +327,7 @@
     { key: "cambio", label: "Cambio" },
     { key: "km", label: "Kilometraje", format: function (s) { return s + " km"; } },
     { key: "potencia", label: "Potencia" },
-    { key: "precio", label: "Precio", format: function () { return PENDING; } }
+    { key: "precio", label: "Precio", format: function (s) { return s ? Number(s).toLocaleString("es-ES") + " €" : PENDING; } }
   ];
 
   var CAR_SVG =
