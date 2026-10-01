@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sobre Ruedas | Concesionario de vehículos y presupuestos personalizados</title>
+  <meta name="description" content="Sobre Ruedas es un concesionario de vehículos. Descubre los coches disponibles y solicita un presupuesto personalizado llamando al 908 368 294." />
+  <meta name="theme-color" content="#0B0C0F" />
+
+  <!-- Canonical preparada: actualizar el dominio definitivo cuando exista -->
+  <link rel="canonical" href="https://www.sobreruedas.es/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:site_name" content="Sobre Ruedas" />
+  <meta property="og:title" content="Sobre Ruedas | Concesionario de vehículos" />
+  <meta property="og:description" content="Encuentra tu próximo coche y solicita un presupuesto personalizado. Contacto directo con Sobre Ruedas: 908 368 294." />
+  <meta property="og:url" content="https://www.sobreruedas.es/" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoDealer",
+    "name": "Sobre Ruedas",
+    "description": "Concesionario de vehículos especializado en ayudar al cliente a encontrar su próximo coche y solicitar un presupuesto personalizado.",
+    "telephone": "+34908368294",
+    "url": "https://www.sobreruedas.es/"
+  }
+  </script>
+</head>
+
+<body class="is-locked">
+
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- ============================================================
+       PANTALLA DE IDENTIFICACIÓN
+  ============================================================ -->
+  <div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate__media">
+      <img
+        src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=1400&q=80"
+        alt="Vehículo deportivo moderno aparcado, imagen de portada de Sobre Ruedas"
+        width="1400"
+        height="1600"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="gate__media-overlay">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6.5 17l-1.2-4.6A2.5 2.5 0 0 1 7.7 9.5h8.6a2.5 2.5 0 0 1 2.4 2.9L17.5 17"/><circle cx="8" cy="17.6" r="1.6"/><circle cx="16" cy="17.6" r="1.6"/><path d="M9.5 12.5h5"/></svg>
+        </span>
+        <p class="brand__name">Sobre Ruedas</p>
+        <p class="gate__tagline">Concesionario de vehículos</p>
+      </div>
+    </div>
+
+    <div class="gate__panel">
+      <div class="gate__panel-inner">
+        <div class="brand gate__brand">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6.5 17l-1.2-4.6A2.5 2.5 0 0 1 7.7 9.5h8.6a2.5 2.5 0 0 1 2.4 2.9L17.5 17"/><circle cx="8" cy="17.6" r="1.6"/><circle cx="16" cy="17.6" r="1.6"/><path d="M9.5 12.5h5"/></svg>
+          </span>
+          <span class="brand__name">Sobre <em>Ruedas</em></span>
+        </div>
+        <p class="eyebrow">Identificación</p>
+        <p class="gate__title" id="gate-title">Encuentra tu próximo coche</p>
+        <p class="gate__subtitle">Identifícate para descubrir nuestros vehículos y solicitar un presupuesto personalizado.</p>
+
+        <form class="gate-form" id="gate-form" novalidate autocomplete="on">
+          <div class="field">
+            <label class="field__label" for="nombre">Nombre <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__input" type="text" id="nombre" name="nombre" placeholder="Tu nombre"
+                   autocomplete="given-name" required aria-required="true" aria-describedby="nombre-error" />
+            <p class="field__error" id="nombre-error" role="alert" hidden>Introduce tu nombre.</p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="apellido">Apellido <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__input" type="text" id="apellido" name="apellido" placeholder="Tu apellido"
+                   autocomplete="family-name" required aria-required="true" aria-describedby="apellido-error" />
+            <p class="field__error" id="apellido-error" role="alert" hidden>Introduce tu apellido.</p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="email">Gmail / Email <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__input" type="email" id="email" name="email" placeholder="tuemail@gmail.com"
+                   autocomplete="email" inputmode="email" required aria-required="true" aria-describedby="email-error" />
+            <p class="field__error" id="email-error" role="alert" hidden>Introduce un email válido.</p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="telefono">Número de teléfono <span class="req" aria-hidden="true">*</span></label>
+            <input class="field__input" type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono"
+                   autocomplete="tel" inputmode="tel" required aria-required="true" aria-describedby="telefono-error" />
+            <p class="field__error" id="telefono-error" role="alert" hidden>Introduce un número de teléfono válido.</p>
+          </div>
+
+          <div class="field field--check">
+            <input class="field__check" type="checkbox" id="consentimiento" name="consentimiento" aria-describedby="consentimiento-error" />
+            <label for="consentimiento">
+              He leído y acepto la
+              <button type="button" class="linkish" data-legal="privacidad">Política de Privacidad</button>.
+              Mis datos se usarán únicamente para atender mi solicitud de presupuesto.
+            </label>
+            <p class="field__error" id="consentimiento-error" role="alert" hidden>Debes aceptar la política de privacidad.</p>
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit" id="gate-submit" disabled>
+            <span class="btn__label">Acceder a Sobre Ruedas</span>
+            <span class="btn__spinner" aria-hidden="true"></span>
+          </button>
+
+          <p class="gate-form__feedback" id="gate-feedback" role="status" aria-live="polite"></p>
+
+          <noscript>
+            <p class="gate-form__feedback">
+              El formulario de identificación necesita JavaScript. Mientras tanto, puedes contactar
+              con Sobre Ruedas en el <a href="tel:908368294">908 368 294</a>.
+            </p>
+          </noscript>
+        </form>
+
+        <p class="gate__footnote">
+          Tus datos se tratan de forma confidencial y no se muestran públicamente.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CONTENIDO PRINCIPAL
+  ============================================================ -->
+  <div class="site" id="site">
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+      <div class="container header__inner">
+        <a class="brand" href="#inicio" aria-label="Sobre Ruedas, inicio">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6.5 17l-1.2-4.6A2.5 2.5 0 0 1 7.7 9.5h8.6a2.5 2.5 0 0 1 2.4 2.9L17.5 17"/><circle cx="8" cy="17.6" r="1.6"/><circle cx="16" cy="17.6" r="1.6"/><path d="M9.5 12.5h5"/></svg>
+          </span>
+          <span class="brand__name">Sobre <em>Ruedas</em></span>
+        </a>
+
+        <nav class="nav" id="nav" aria-label="Navegación principal">
+          <ul class="nav__list">
+            <li><a href="#vehiculos">Vehículos</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#ventajas">Ventajas</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+            <li><a href="#presupuesto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <a class="btn btn--primary btn--sm header__cta" href="#presupuesto" data-cta="header">Solicitar presupuesto</a>
+          <a class="btn btn--outline btn--sm header__phone" href="tel:908368294" data-phone="header">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+            <span class="header__phone-text">908 368 294</span>
+          </a>
+
+          <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú de navegación">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" hidden>
+        <ul class="mobile-menu__list">
+          <li><a href="#vehiculos">Vehículos</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#ventajas">Ventajas</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="#presupuesto">Contacto</a></li>
+        </ul>
+        <a class="btn btn--primary btn--block" href="#presupuesto" data-cta="mobile-menu">Solicitar presupuesto</a>
+        <a class="btn btn--outline btn--block" href="tel:908368294" data-phone="mobile-menu">Llamar al 908 368 294</a>
+      </div>
+    </header>
+
+    <main id="contenido-principal">
+
+      <!-- HERO -->
+      <section class="hero" id="inicio">
+        <div class="hero__media" aria-hidden="true">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80"
+               alt="" width="1920" height="1080" decoding="async" />
+        </div>
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow">Concesionario de vehículos</p>
+            <h1 class="hero__title">Encuentra el coche que buscas</h1>
+            <p class="hero__subtitle">Descubre nuestros vehículos y solicita un presupuesto personalizado de forma rápida y sencilla.</p>
+            <div class="hero__actions">
+              <button class="btn btn--primary btn--lg" type="button" data-cta="hero" data-action="quote">Solicitar presupuesto</button>
+              <a class="btn btn--ghost btn--lg" href="#vehiculos" data-cta="hero-secondary">Ver vehículos</a>
+            </div>
+            <ul class="hero__points">
+              <li>Vehículos adaptados a tus necesidades</li>
+              <li>Presupuesto personalizado</li>
+              <li>Contacto directo: <a href="tel:908368294" data-phone="hero">908 368 294</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- VEHÍCULOS -->
+      <section class="section" id="vehiculos">
+        <div class="container">
+          <div class="section__head">
+            <div>
+              <p class="eyebrow">Catálogo</p>
+              <h2 class="section__title">Vehículos disponibles</h2>
+              <p class="section__lead">Explora las fichas de vehículos y solicita un presupuesto personalizado para el que te interese.</p>
+            </div>
+            <a class="btn btn--outline" href="#presupuesto" data-cta="vehicles-head">Solicitar presupuesto</a>
+          </div>
+
+          <!-- Filtros -->
+          <form class="filters" id="filters" aria-label="Filtros de vehículos">
+            <div class="filters__grid">
+              <div class="field field--sm">
+                <label class="field__label" for="f-marca">Marca</label>
+                <select class="field__input" id="f-marca" data-filter="marca"><option value="">Todas</option></select>
+              </div>
+              <div class="field field--sm">
+                <label class="field__label" for="f-combustible">Combustible</label>
+                <select class="field__input" id="f-combustible" data-filter="combustible"><option value="">Todos</option></select>
+              </div>
+              <div class="field field--sm">
+                <label class="field__label" for="f-cambio">Cambio</label>
+                <select class="field__input" id="f-cambio" data-filter="cambio"><option value="">Todos</option></select>
+              </div>
+              <div class="field field--sm">
+                <label class="field__label" for="f-anio">Año</label>
+                <select class="field__input" id="f-anio" data-filter="anio"><option value="">Todos</option></select>
+              </div>
+              <div class="field field--sm">
+                <label class="field__label" for="f-tipo">Tipo de vehículo</label>
+                <select class="field__input" id="f-tipo" data-filter="tipo"><option value="">Todos</option></select>
+              </div>
+            </div>
+            <div class="filters__foot">
+              <p class="filters__count" id="filters-count" role="status" aria-live="polite"></p>
+              <button class="btn btn--text" type="button" id="filters-clear">Limpiar filtros</button>
+            </div>
+          </form>
+
+          <div class="vehicle-grid" id="vehicle-grid"><!-- generado por app.js --></div>
+
+          <p class="note">
+            Fichas preparadas para incorporar vehículos reales: marca, modelo, año, combustible, cambio,
+            kilometraje, potencia, precio y disponibilidad — <span class="pending">[INFORMACIÓN PENDIENTE]</span>.
+          </p>
+        </div>
+      </section>
+
+      <!-- CTA INTERMEDIO -->
+      <section class="midcta">
+        <div class="container midcta__inner">
+          <div>
+            <h2 class="midcta__title">¿Tienes un vehículo en mente?</h2>
+            <p class="midcta__text">Contacta con Sobre Ruedas y solicita un presupuesto personalizado.</p>
+          </div>
+          <a class="btn btn--primary btn--lg" href="tel:908368294" data-cta="middle" data-phone="middle">Llamar al 908 368 294</a>
+        </div>
+      </section>
+
+      <!-- PRESENTACIÓN -->
+      <section class="section section--split" id="sobre-ruedas">
+        <div class="container split">
+          <div class="split__media">
+            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80"
+                 alt="Vehículo moderno en exposición, representativo del catálogo de Sobre Ruedas"
+                 width="1200" height="900" loading="lazy" decoding="async" />
+          </div>
+          <div class="split__content">
+            <p class="eyebrow">Sobre Sobre Ruedas</p>
+            <h2 class="section__title">Tu próximo coche empieza aquí</h2>
+            <p class="split__text">
+              Sobre Ruedas es un concesionario de vehículos pensado para quien busca encontrar un coche
+              que se adapte a sus necesidades y a su presupuesto.
+            </p>
+            <ul class="checklist">
+              <li>Explora los vehículos disponibles en un solo lugar.</li>
+              <li>Selecciona el vehículo que te interesa y consulta su información.</li>
+              <li>Solicita información y un presupuesto personalizado de forma directa.</li>
+              <li>Resuelve tus dudas hablando con Sobre Ruedas en el <a href="tel:908368294" data-phone="about">908 368 294</a>.</li>
+            </ul>
+            <div class="split__actions">
+              <a class="btn btn--primary" href="#vehiculos">Ver vehículos</a>
+              <a class="btn btn--outline" href="tel:908368294" data-phone="about-cta">Llamar ahora</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VENTAJAS -->
+      <section class="section section--alt" id="ventajas">
+        <div class="container">
+          <div class="section__head section__head--center">
+            <div>
+              <p class="eyebrow">Ventajas</p>
+              <h2 class="section__title">¿Por qué Sobre Ruedas?</h2>
+              <p class="section__lead">Un proceso claro, directo y centrado en el vehículo que tú quieres.</p>
+            </div>
+          </div>
+
+          <div class="benefit-grid">
+            <article class="benefit">
+              <span class="benefit__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg>
+              </span>
+              <h3 class="benefit__title">Presupuesto personalizado</h3>
+              <p class="benefit__text">Solicita información sobre el vehículo que te interesa y recibe atención personalizada.</p>
+            </article>
+
+            <article class="benefit">
+              <span class="benefit__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L19 7"/></svg>
+              </span>
+              <h3 class="benefit__title">Proceso sencillo</h3>
+              <p class="benefit__text">Encuentra un vehículo, selecciónalo y contacta con Sobre Ruedas.</p>
+            </article>
+
+            <article class="benefit">
+              <span class="benefit__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              </span>
+              <h3 class="benefit__title">Atención directa</h3>
+              <p class="benefit__text">Habla directamente con el concesionario para resolver tus dudas.</p>
+            </article>
+
+            <article class="benefit">
+              <span class="benefit__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6.5 17l-1.2-4.6A2.5 2.5 0 0 1 7.7 9.5h8.6a2.5 2.5 0 0 1 2.4 2.9L17.5 17"/><circle cx="8" cy="17.6" r="1.6"/><circle cx="16" cy="17.6" r="1.6"/><path d="M9.5 12.5h5"/></svg>
+              </span>
+              <h3 class="benefit__title">Encuentra tu próximo vehículo</h3>
+              <p class="benefit__text">Explora las opciones disponibles y descubre cuál encaja contigo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CÓMO FUNCIONA -->
+      <section class="section" id="como-funciona">
+        <div class="container">
+          <div class="section__head section__head--center">
+            <div>
+              <p class="eyebrow">Cómo funciona</p>
+              <h2 class="section__title">Tres pasos y listo</h2>
+              <p class="section__lead">Un proceso rápido y sencillo, de principio a fin.</p>
+            </div>
+          </div>
+
+          <ol class="steps">
+            <li class="step">
+              <span class="step__num">01</span>
+              <h3 class="step__title">Identifícate</h3>
+              <p class="step__text">Introduce tus datos para acceder a la plataforma.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">02</span>
+              <h3 class="step__title">Elige tu vehículo</h3>
+              <p class="step__text">Explora los vehículos disponibles y selecciona el que te interese.</p>
+            </li>
+            <li class="step">
+              <span class="step__num">03</span>
+              <h3 class="step__title">Solicita tu presupuesto</h3>
+              <p class="step__text">Pulsa “Solicitar presupuesto” y contacta con Sobre Ruedas en el <a href="tel:908368294" data-phone="steps">908 368 294</a>.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PRESUPUESTO -->
+      <section class="quote" id="presupuesto">
+        <div class="container quote__inner">
+          <p class="eyebrow eyebrow--light">Presupuesto</p>
+          <h2 class="quote__title">¿Ya has encontrado tu coche?</h2>
+          <p class="quote__subtitle">Solicita información y un presupuesto personalizado sobre el vehículo que te interesa.</p>
+
+          <p class="quote__selection" id="quote-selection" hidden></p>
+
+          <p class="quote__phone">
+            Teléfono: <a href="tel:908368294" data-phone="quote">908 368 294</a>
+          </p>
+
+          <div class="quote__actions">
+            <a class="btn btn--dark btn--lg" href="tel:908368294" data-cta="quote-section" data-phone="quote-btn">Solicitar presupuesto</a>
+            <button class="btn btn--outline-dark btn--lg" type="button" data-action="quote">Elegir vehículo</button>
+          </div>
+          <p class="quote__hint">En móvil, el botón abre directamente la aplicación de llamadas.</p>
+        </div>
+      </section>
+
+      <!-- CONFIANZA -->
+      <section class="section section--alt" id="confianza">
+        <div class="container">
+          <div class="section__head section__head--center">
+            <div>
+              <p class="eyebrow">Confianza</p>
+              <h2 class="section__title">Un proceso claro y transparente</h2>
+              <p class="section__lead">
+                Sin datos inventados: te explicamos exactamente cómo contactar y cómo solicitar tu presupuesto.
+              </p>
+            </div>
+          </div>
+
+          <div class="trust-grid">
+            <article class="trust">
+              <h3 class="trust__title">Proceso claro</h3>
+              <p class="trust__text">Te identificas, eliges un vehículo y solicitas el presupuesto. Sin pasos ocultos.</p>
+            </article>
+            <article class="trust">
+              <h3 class="trust__title">Contacto directo</h3>
+              <p class="trust__text">Hablas con Sobre Ruedas en el <a href="tel:908368294" data-phone="trust">908 368 294</a>.</p>
+            </article>
+            <article class="trust">
+              <h3 class="trust__title">Sin compromiso</h3>
+              <p class="trust__text">Puedes pedir información de un vehículo antes de decidirte.</p>
+            </article>
+          </div>
+
+          <p class="note note--center">
+            Valoraciones, testimonios y datos del concesionario: <span class="pending">[INFORMACIÓN PENDIENTE]</span>
+            — se incorporarán cuando existan datos reales y verificables.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="container container--narrow">
+          <div class="section__head section__head--center">
+            <div>
+              <p class="eyebrow">Preguntas frecuentes</p>
+              <h2 class="section__title">Resolvemos tus dudas</h2>
+            </div>
+          </div>
+
+          <div class="faq">
+            <details class="faq__item">
+              <summary>¿Cómo puedo solicitar un presupuesto?</summary>
+              <p>Selecciona el vehículo que te interesa y pulsa “Solicitar presupuesto” para contactar con Sobre Ruedas en el <a href="tel:908368294" data-phone="faq">908 368 294</a>.</p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Tengo que identificarme antes de acceder?</summary>
+              <p>Sí. Al entrar tendrás que introducir tu nombre, apellido, email y número de teléfono.</p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Puedo preguntar por un vehículo concreto?</summary>
+              <p>Sí. Selecciona el vehículo que te interese y contacta con Sobre Ruedas: la interfaz recuerda qué vehículo estabas consultando.</p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Cómo contacto con Sobre Ruedas?</summary>
+              <p>Puedes contactar mediante el número <a href="tel:908368294" data-phone="faq-phone">908 368 294</a>.</p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Puedo solicitar información antes de decidirme?</summary>
+              <p>Sí. El objetivo del contacto es que puedas consultar la información del vehículo y solicitar un presupuesto personalizado.</p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Se muestran mis datos personalmente?</summary>
+              <p>No. Tus datos de identificación se usan para atenderte y no se exponen públicamente.</p>
+            </details>
+            <details class="faq__item">
+              <summary>¿Los precios están publicados en la web?</summary>
+              <p>El presupuesto es personalizado según el vehículo seleccionado. Consulta el precio directamente con Sobre Ruedas en el <a href="tel:908368294" data-phone="faq-price">908 368 294</a>.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="finalcta" id="final">
+        <div class="container finalcta__inner">
+          <h2 class="finalcta__title">¿Listo para encontrar tu próximo coche?</h2>
+          <p class="finalcta__text">Elige el vehículo que te interesa y solicita tu presupuesto personalizado.</p>
+          <div class="finalcta__actions">
+            <button class="btn btn--primary btn--lg" type="button" data-cta="final" data-action="quote">Solicitar presupuesto</button>
+            <a class="btn btn--ghost btn--lg finalcta__call" href="tel:908368294" data-cta="final-call" data-phone="final">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+              <span class="finalcta__call-desk">Contacta en el 908 368 294</span>
+              <span class="finalcta__call-mob">Llamar ahora</span>
+            </a>
+          </div>
+          <p class="finalcta__phone">908 368 294</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="#inicio" aria-label="Sobre Ruedas, inicio">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M6.5 17l-1.2-4.6A2.5 2.5 0 0 1 7.7 9.5h8.6a2.5 2.5 0 0 1 2.4 2.9L17.5 17"/><circle cx="8" cy="17.6" r="1.6"/><circle cx="16" cy="17.6" r="1.6"/><path d="M9.5 12.5h5"/></svg>
+            </span>
+            <span class="brand__name">Sobre <em>Ruedas</em></span>
+          </a>
+          <p class="footer__desc">Concesionario de vehículos. Encuentra tu próximo coche y solicita un presupuesto personalizado.</p>
+          <p class="footer__legal-data">Datos empresariales: <span class="pending">[DATOS EMPRESARIALES PENDIENTES]</span></p>
+        </div>
+
+        <nav class="footer__col" aria-label="Vehículos">
+          <h3 class="footer__title">Vehículos</h3>
+          <ul>
+            <li><a href="#vehiculos">Vehículos disponibles</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#ventajas">Ventajas</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__col" aria-label="Contacto">
+          <h3 class="footer__title">Contacto</h3>
+          <ul>
+            <li><a href="tel:908368294" data-phone="footer">Teléfono: 908 368 294</a></li>
+            <li><a href="#presupuesto">Solicitar presupuesto</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__col" aria-label="Información legal">
+          <h3 class="footer__title">Legal</h3>
+          <ul>
+            <li><button type="button" class="linkish" data-legal="privacidad">Política de privacidad</button></li>
+            <li><button type="button" class="linkish" data-legal="cookies">Política de cookies</button></li>
+            <li><button type="button" class="linkish" data-legal="condiciones">Condiciones legales</button></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="container footer__bottom">
+        <p>© <span id="year">2026</span> Sobre Ruedas. Todos los derechos reservados.</p>
+        <a class="footer__top" href="#inicio">Volver arriba</a>
+      </div>
+    </footer>
+
+    <!-- BARRA MÓVIL -->
+    <div class="mobilebar" aria-label="Acciones rápidas">
+      <a class="mobilebar__btn mobilebar__btn--call" href="tel:908368294" data-phone="mobilebar">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+        Llamar
+      </a>
+      <button class="mobilebar__btn mobilebar__btn--quote" type="button" data-cta="mobilebar" data-action="quote">Solicitar presupuesto</button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MODAL DE PRESUPUESTO
+  ============================================================ -->
+  <div class="modal" id="quote-modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title" tabindex="-1">
+      <button class="modal__close" type="button" data-close-modal aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+      <p class="eyebrow" id="quote-modal-eyebrow">Solicitar presupuesto</p>
+      <h2 class="modal__title" id="quote-modal-title">Solicitud de presupuesto</h2>
+
+      <div class="modal-vehicle" id="modal-vehicle" hidden>
+        <div class="modal-vehicle__media" id="modal-vehicle-media"></div>
+        <div class="modal-vehicle__info">
+          <p class="modal-vehicle__label">Has seleccionado:</p>
+          <p class="modal-vehicle__name" id="modal-vehicle-name"></p>
+          <p class="modal-vehicle__spec" id="modal-vehicle-spec"></p>
+        </div>
+      </div>
+
+      <p class="modal__text" id="quote-modal-text">
+        Solicita tu presupuesto personalizado llamando a Sobre Ruedas.
+      </p>
+
+      <p class="modal__phone">Solicita tu presupuesto llamando al:
+        <a href="tel:908368294" data-phone="modal">908 368 294</a>
+      </p>
+
+      <div class="modal__actions">
+        <a class="btn btn--primary btn--lg btn--block" href="tel:908368294" data-cta="modal-call" data-phone="modal-btn">Llamar ahora</a>
+        <button class="btn btn--outline btn--lg btn--block" type="button" id="copy-phone">Copiar número 908 368 294</button>
+      </div>
+
+      <p class="modal__hint" id="modal-hint"></p>
+    </div>
+  </div>
+
+  <!-- MODAL LEGAL -->
+  <div class="modal" id="legal-modal" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title" tabindex="-1">
+      <button class="modal__close" type="button" data-close-modal aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <h2 class="modal__title" id="legal-modal-title">Política de privacidad</h2>
+      <div class="legal-body" id="legal-body"></div>
+      <button class="btn btn--outline btn--block" type="button" data-close-modal>Cerrar</button>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="app.js" defer></script>
+
+  <noscript>
+    <style>
+      #gate { display: none !important; }
+      #site { opacity: 1 !important; visibility: visible !important; }
+      body { overflow: auto !important; }
+    </style>
+  </noscript>
+</body>
+</html>
